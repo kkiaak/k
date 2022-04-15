@@ -1,0 +1,720 @@
+/* Aggiunta Menu */  
+.hamburger{
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    .menu{
+        display: block !important;
+        margin-left: 0;
+        position: absolute;
+        top:0;
+        right:-100%;
+        background: rgba(0, 0, 0, 0.95);
+        height: 100vh;
+        padding-top: 80px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .menu li{
+        display: block !important;
+    }
+    .menu li a{
+        padding: 15px 30px;
+    }
+    
+    .menu--open{
+        right:-70%;
+        padding-right: 10%;
+    }
+    
+    .hamburger{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:40px;
+        right:30px
+    }
+    .hamburger span{
+        background: #fff;
+        height: 3px;
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .sub-menu{
+        visibility: visible !important;
+        opacity: 75% !important;
+    }
+}
+
+@media (max-width: 650px) {
+  .menu--open{
+      right: -60%;
+  }
+}
+
+@media (max-width: 500px) {
+    .menu--open{
+        right: -45%;
+    }
+}
+
+@media (max-width: 320px) {
+    .menu--open{
+        right: 0%;
+    }
+    .menu{
+        background: rgba(0, 0, 0, 0.975);
+    }
+}
+
+
+
+
+
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    
+  } 
+  
+  
+  /*PAGINA DOCUMENTI */
+  #documenti li {
+    display: inline;
+  }
+  
+  #documenti li a {
+    display: block;
+    color: rgb(17, 15, 15);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #documenti li a:hover {
+    background-color: #111;
+  }
+  
+  #documenti {
+      margin: 30px;
+      float: inline-end;
+      background-image: url('monte.jpg') ;
+      background-repeat: no-repeat;
+      border-radius: 0px;
+      font-weight: bold;
+      font-size: large;
+      font-style: oblique;   
+      display: grid;
+      
+      
+  }
+  #documenti li a {
+    color:ivory;
+    
+  }
+  
+  /*MENU */
+  /* menu hambuger per mobile https://www.w3schools.com/howto/howto_js_mobile_navbar.asp */
+  nav {
+    width: 100%;
+    height: 450px;
+    padding: 0 15px;
+    position: fixed;
+    background-image: url('scoutsempre5.jpg')  ;
+    background-attachment: absolute;
+    /*border:black 3px solid;*/
+  }
+  
+  
+  .menu {
+      list-style: none;
+      display:flex;
+      flex-direction: row;
+      padding: 20px 100px 0px 40px;
+      width: 100%;
+      font-size: large; 
+  }
+
+
+  .menu li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px bold;
+    position: static;
+    
+    justify-content: space-between;
+  }
+  .menu a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color:cornsilk;
+    font-weight: bold;
+    transition: .3s ;
+  }
+  .menu a:hover  {
+    color:antiquewhite;
+    background-color: black;
+  }
+  
+  .sub-menu {
+    width: 150px;
+    position: static;
+    top: 40px;
+    left: 0;
+    border: 1px solid white;
+    font-style: oblique;
+    font-size: 10px;
+    
+    border-bottom: none;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+  
+  }
+  .menu .has-children:hover .sub-menu {
+    
+    transition: .5s;
+    visibility: visible;
+    opacity: 0.85;
+    top: 50px;
+  
+  }
+  
+  .sub-menu li {
+    width: 200px;
+    font-size: 10px;
+    border: 1px solid white;
+    background-color: honeydew;
+  
+  }
+  .sub-menu a {
+    color: rgb(3, 3, 3);
+    background-color: rgb(232, 247, 234);
+  }
+  .sub-menu a:hover {
+    background: rgb(222, 245, 188) ;
+    color: #070505;
+  }
+  
+    .dropdown-content a {
+      color: rgb(51, 53, 51);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      border-radius: 20px;
+    
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #080606;
+    }
+  
+  /*BARRA LATERALE -> da sistemare ancora ->foto oppure mettere twitter */
+  
+  .sidenav {
+      height: 1300px;
+      width: 13%;
+      position:absolute;
+      border-radius: 10px;
+      z-index: 1;
+      top: 500px;
+      left: 0;
+      background-image: url('foto1.jpg');
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+      padding-top: 20px;
+      margin-left: 20px;
+  }
+  /*
+  .clock {
+      border-radius: 50%;
+      background: url('clock.jpg') ;
+      background-size: 100%;
+      background-position: 0px;
+      height: 8em;
+      padding-bottom: 0%;
+      position: relative;
+      width: 8em;
+      margin: auto;
+      margin-top: 20px;
+      display: block;
+    }
+    
+    #hours {
+      background: rgb(3, 3, 3);
+      height: 20%;
+      left: 48.75%;
+      position: absolute;
+      bottom: 50%;
+      transform-origin: bottom;
+      width: 2.5%;
+    }
+    
+    #minutes {
+      background: rgb(14, 13, 13);
+      height: 25%;
+      left: 49%;
+      position: absolute;
+      bottom: 50%;
+      transform-origin: bottom;
+      width: 2%;
+    }
+  
+    #seconds {
+    background: rgb(5, 5, 5);
+    height: 30%;
+    left: 49.5%;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+    width: 1%;
+    z-index: 8;
+  }
+  
+  */
+  
+  /*paragrafi tutte pagine */
+  * {
+    box-sizing: border-box;
+  }
+  
+   body {
+       display: inline;
+       background-color: #f1f1f1; 
+       margin-top: 500px;
+       
+       
+   }
+   
+   #testo {
+     margin-left: 20%;
+     margin-right: 30px;
+     margin-top: 80px;
+     text-align: center;
+   }
+   
+  #contenuto {
+  margin-top: 40px;
+  margin-left: 10%;
+  margin-right: 100px;
+  text-align: center;
+  z-index: 2;
+  }
+  
+  
+  
+  
+  footer {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    background-color: rgb(245, 241, 234);
+  }
+  
+  
+  
+  
+   /*PAGINE HOME*/
+  
+   .flip-card {              
+    margin-left: 30px;
+    margin-right: 30px;
+  
+    background-color: transparent;
+    width: 400px;
+    height: 370px;
+    perspective: 1000px;
+    
+  } 
+  
+  
+  .flip-card-inner {
+    
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 20px 100px 200px 10px; /* in realtà margine sx va tolto e va centrato tutto */
+    
+    
+  
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    padding:10px 10px 10px 10px; 
+    background-color: #14006e;
+    color: white;
+    font-size: 11px;
+    transform: rotateY(180deg);
+  }
+  
+  /*UNITA' */
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    margin-top: 70px;
+    margin-left: 350px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    margin-right: 12px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    
+    color: white;
+    
+  }
+  
+  .row {
+    margin: 20px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+    
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+    margin: 0px;
+    margin-top: 5px;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  /*UNITA' */
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+  #testo .column {
+    float: left;
+    width: 33.33%;
+    padding: 0px;
+  }
+  
+  /* Clear floats after image containers */
+  #testo .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  
+   /* PAGINA CONTATTI */
+  #social {
+    margin-top: 40px;
+    position: relative;
+    text-decoration: none; 
+  }
+  
+   #icona {
+     font-style:oblique;  
+     
+   }
+   .fa {
+    padding: 15px;
+    font-size: 60px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+   .fa:hover {
+    opacity: 0.6;
+  }
+  .fa-instagram {
+    background: #d1018c;
+    color: white;
+    width: 90px;
+    border-radius: 10px;
+  }
+  .fa-facebook {
+    background: #27069e;
+    color: white;
+    width: 90px;
+    border-radius: 10px;
+  }
+  
+  
+   #casella {
+     margin: 50px 100px 20px 100px;
+     width: 80%;
+     height: 100%;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   form {
+     margin-top: 20px;
+     margin-bottom: 20px;
+     background: #fff;
+     display: flex;
+     flex-direction: column;
+     padding: 2vw 4vw;
+     width: 70%;
+     max-width: 600px;
+     border-radius: 10px;
+     font-style: normal;
+   }
+  
+   form h3 {
+     color: #555;
+     font-weight: 800;
+     margin-bottom: 20px;
+   }
+   form input, form textarea {
+     border: 0;
+     margin: 10px 0;
+     padding: 20px;
+     outline: none;
+     background: #f5f5f5;
+     font-size: 16px ;
+     font: 1em sans-serif;
+   }
+    
+   form button {
+     padding: 15px;
+     background-color: #1f0074;
+     color: #fff;
+     font-size: 18px;
+     outline: none;
+     cursor: pointer;
+     width: 150px;
+     margin: 20px auto 0;
+     border-radius: 20px;
+     border: none;
+   }
+  
+  
+  
+  /*.sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      }
+  
+  .sidenav a:hover {
+       color: #f1f1f1;
+          }
+      */
+      /*possibile usare flickyty cdn js per slider che scorrono (poi inizializza con html perchè piu semplice) nel video creare un sito html/css/js #2 */
+    /*
+      @media screen and (max-height: 450px) and (max-width: 400px) {
+  
+        
+        .big-text{font-size: 40px;} */
+          
+        
+  
+      /* https://youtu.be/Q0C1FTUz0lM -> per rendere responsive la nav bar 
+      https://youtu.be/SGwH2NdVyZE -> flexbox responsive
+      https://www.w3schools.com/html/html_responsive.asp -> testo responsive e altro*/ 
+        
+  
+        @media screen and (max-width: 1200px) {
+              body {
+                
+                font-size: 12px;
+              }
+  
+          /* unità galleria a scorrimento */
+            .container {
+              margin: auto;
+            }
+            .row {
+              margin: 5px;
+            }
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+  
+            }
+            
+           
+            .column {
+              float: left;
+              width:100px;
+              margin: 3px;
+              margin-top: 5px;
+              
+            }
+            
+            .prev, 
+            .next {
+              top: 25%;
+            }
+            
+          /* card della HOME */
+  
+          .flip-card {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 50px;
+            
+            
+            
+          }
+          .flip-card-inner {
+            display: flex;
+            flex-direction: column;
+          
+          }
+  
+          
+          
+          
+          /* FORM CONTATTI */
+          #casella {
+                  
+                  width: 400px;
+                  
+                  right: 0;
+                  left: 0;
+                  max-width: 250px;
+                  padding: 10 20px;
+                  margin: 0px ;
+                  
+                  display: flex;
+                  flex-wrap: wrap;
+          }
+  
+          #casella input  {
+            width: 120px;
+            height: 50px;
+            font-size: 12px;
+            text-align: center;
+            margin-left: 7px;
+          }
+  
+          #casella textarea {
+            width: 120px;
+            height: 70px;
+            font-size: 12px;
+            text-align: center;
+            margin-left: 7px;
+  
+          }
+  
+          #casella button {
+            width:100px;
+            height: 50px;
+            font-size: 15px;
+          }
+  
+          .sidenav {
+            display: none;
+          }
+  
+          
+          
+        }
+             
+                 
