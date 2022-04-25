@@ -185,20 +185,23 @@ let slideIndex = 1;
 */
 
 //FUNZIONE PER INVIO EMAIL -> usato tutorial con smtp ma c'è un l'atro con node
- /*       
-funcion sendEmail() {
+ 
+//INVIO EMAIL TRAMITE UTILLIZZO DI SMTPJS, solo che ho problemi quando inserisco email nel contact form
+     
+function sendEmail() {
     Email.send({
-        Host : "smtp.gmail.com",
-        Username : "kianakk2001@gmail.com",
-        Password : "password",
-        To : 'them@website.com',
-        From : "you@isp.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        secureToken : "ce7ed4a1-b52e-45a9-96a0-539f8892250d",
+        To : 'kkianakaviani@gmail.com',
+        From : document.getElementById("email").nodeValue,
+        Subject : "Nuova richiesta di contatto",
+        Body : "Nome: " + document.getElementById("name").value 
+              + "<br> Email: " + document.getElementById("email").value
+              + "<br> Telefono: " + document.getElementById("phone").value
+              + "<br> Il messaggio: " + document.getElementById("message").value
     }).then(
-      message => alert(message)
+      message => alert("Messaggio inviato con successo")
     );
-    } */
+} 
 
    const nodemailer = require ('nodemailer');
    
